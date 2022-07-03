@@ -9,6 +9,8 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  matchLabels:
+    app: nginx
   template:
     metadata:
       labels:
